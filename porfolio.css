@@ -150,11 +150,15 @@ nav h1 {
 .links li {
 	list-style: none;
 	padding: 0 10px 22px 10px;
-	transition: 0.3 all ease;
+	transition: 0.5 all ease;
 }
 
 .links li:hover {
 	border-bottom: 1px solid rgba(0,8,122,1);
+}
+
+.header a {
+	text-decoration: none;
 }
 
 @keyframes bgColor {
@@ -228,7 +232,7 @@ nav h1 {
 }
 
 .view:hover {
-	background: rgba(0,8,122,0.5);
+	background: lightblue;
 }
 
 
@@ -274,13 +278,11 @@ button.accordion {
 	border: 0;
 	padding: 0;
 	transition: 0.3s all ease;
-	background: #FEF1DB;
-	animation-name: bgColor; 
-	animation-duration: 30s;
-	animation-timing-function: linear;
-	animation-delay: 3s;
-	animation-iteration-count: infinite;
-	animation-direction: forwards;
+	background: transparent;
+}
+
+button:hover {
+	background: lightblue;
 }
 
 
@@ -316,6 +318,8 @@ div.panel {
 	padding: 10px;
 	border-bottom: 1px solid rgba(0,8,122,1);
 	margin: 0 2%;
+	transition: 0.3s all ease;
+	}
 }
 
 
@@ -327,7 +331,7 @@ div.panel {
 
 .about h2 {
 	margin: 0;
-	width: 25%;
+	width: 50%;
 	font-size: 2.5em;
 	padding: 10px;
 	border-bottom: 1px solid rgba(0,8,122,1);
@@ -337,7 +341,7 @@ div.panel {
 
 .about article {
 	position: relative;
-	top: 100px;
+	top: 50px;
 	width: 90%;
 	height: 337px;
 	margin: 0 auto;
@@ -372,15 +376,29 @@ footer {
 
 .social{
 	position: relative;
-	bottom: 0px;
+	bottom: 10px;
 	right: 40px;
 }
 
+
 a.facebook,.twit,.skype i{
-	color: rgba(211,211,211,1);
+	color: rgba(0,8,122,1);
 	float: right;
-	padding: 0;
-	margin: 0;
+	padding: 10px;
+	margin: 0 auto;
+	font-size: 30px;
+	transition: 0.3s all ease;
+	}
+}
+
+a.facebook i:hover{
+	color: lightblue;
+}
+a.twit i:hover{
+	color: lightblue;
+}
+a.skype i:hover{
+	color: lightblue;
 }
 
 /*Media Queries*/
@@ -389,6 +407,8 @@ a.facebook,.twit,.skype i{
 	.gallery {
 		margin: auto;
 	}
+
+
 }
 
 @media (max-width: 997px) {
@@ -452,7 +472,45 @@ a.facebook,.twit,.skype i{
 	right: 30px;
 	float: right;
 	}
+
+	button.accordion, .skills h2 {
+	width: 80%;
 }
+
+	.about {
+		height: 900px;
+	}	
+
+	.about article {
+	position: relative;
+	top: 100px;
+	width: 50%;
+	height: 600px;
+	margin: 0 auto;
+}
+
+.about img {
+	border-radius: 50%;
+	display: block;
+	margin: 0 auto;
+}
+
+.about h3 {
+	font-style: italic;
+	position: relative;
+	top: 10%;
+	left: 5px;
+	text-align: center;
+	height: 200px;
+	width: 300px;
+	margin: 0;
+	border-left: none;
+	padding-left: 0px;
+	line-height: 130%;
+	font-weight: 100;
+	}
+}
+
 
 
 

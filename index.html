@@ -18,11 +18,21 @@
 <section class="header">
 	<nav>
 		<ul class="links">
-			<li> current projects</li>
-			<li> portfolio</li>
-			<li> skills</li>
-			<li> about</li>
-			<li> contact </li>
+			<a href="#selected">
+				<li> current projects</li>
+			</a>
+			<a href="#portfolio">
+				<li> portfolio</li>
+			</a>
+			<a href="#skills">
+				<li> skills</li>
+			</a>
+			<a href="#about">
+				<li> about</li>
+			</a>
+			<a href="#footer">
+				<li> contact </li>
+			</a>
 		</ul>
 		</nav>
 
@@ -40,7 +50,7 @@
 	</div>
 </section>
 
-<section class="selected">
+<section class="selected" id="selected">
 	<div class="wrapper-s" id="wrapper">
 	<h2>Current Projects</h2>
 		<article>
@@ -60,7 +70,7 @@
 	</div>
 </section>
 
-<section class="portfolio">
+<section class="portfolio" id="portfolio">
 	
 <div class="wrapper-p" id="wrapper">
 
@@ -144,7 +154,7 @@
 	</div>
 </section>
 
-<section class="skills">
+<section class="skills" id="skills">
 
 	<div class="wrapper-s" id="wrapper">
 		<h1>Skills</h1>
@@ -164,7 +174,7 @@
 	</div>
 </section>
 
-<section class="about">
+<section class="about" id="about">
 	<div class="wrapper-a" id="wrapper">
 		<h2>About Me</h2>
 		<article class="me">
@@ -176,7 +186,7 @@
 	
 </section>
 
-<footer>
+<footer id="contact">
 	<div class="social">
 				<a href="#" class="facebook">
 						<i class="fa fa-facebook"></i>
@@ -196,12 +206,13 @@
 
 <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
 
-<script src="smooth-scroll.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-smooth-scroll/2.1.2/jquery.smooth-scroll.min.js"></script>
 
 <script>
 
 	$(document).ready(function(){
 			console.log('the document is ready :)')
+			$('a').smoothScroll()
 
 			$('.gallery').flickity({
 				prevNextButtons: true,
